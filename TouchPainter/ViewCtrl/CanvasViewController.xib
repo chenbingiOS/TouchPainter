@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CanvasViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="rMB-Rr-hRR">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="S8M-7g-mF4"/>
+                        <barButtonItem style="plain" systemItem="trash" id="wUJ-PO-0SE">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="a7h-OC-4V1" id="a7o-gE-a3a"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="dR7-NM-JKU"/>
+                        <barButtonItem image="save" style="plain" id="PE2-WL-Pg5">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="a7h-OC-4V1" id="PAZ-EE-R6A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iZf-XE-jFs"/>
+                        <barButtonItem tag="2" image="open" style="plain" id="9bE-PI-nVI">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="a7h-OC-4V1" id="8DE-ON-LQ3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4ti-fQ-FfT"/>
+                        <barButtonItem tag="1" image="palette" style="plain" id="LiF-Ue-mmW">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="a7h-OC-4V1" id="r4p-Rj-I6V"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OSE-82-fIn"/>
+                        <barButtonItem tag="4" image="undo" style="plain" id="gbm-Mx-iiR">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="a7h-OC-4V1" id="fjI-vP-JsZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8Nd-2f-yoq"/>
+                        <barButtonItem tag="5" image="redo" style="plain" id="ei5-th-DDK">
+                            <connections>
+                                <action selector="requestViewChangeByObject:" destination="a7h-OC-4V1" id="ZfQ-M3-Te9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7mX-aC-zi9"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rMB-Rr-hRR" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="EBc-VH-t6q"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rMB-Rr-hRR" secondAttribute="trailing" id="Wtt-4R-ANj"/>
+                <constraint firstItem="rMB-Rr-hRR" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="fpC-2y-rEB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <customObject id="a7h-OC-4V1" customClass="CoordinatingController"/>
+    </objects>
+    <resources>
+        <image name="open" width="24" height="24"/>
+        <image name="palette" width="24" height="20"/>
+        <image name="redo" width="24" height="24"/>
+        <image name="save" width="24" height="24"/>
+        <image name="undo" width="24" height="24"/>
+    </resources>
+</document>
