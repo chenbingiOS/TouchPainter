@@ -6,8 +6,9 @@
 //  Copyright © 2017年 ChenBing. All rights reserved.
 //
 
-
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
 
 
