@@ -41,26 +41,27 @@
     
     if ([object isKindOfClass:[UIBarButtonItem class]])
     {
-        switch ([(UIBarButtonItem *)object tag])
+        UIBarButtonItemState state = [(UIBarButtonItem *)object tag];
+        switch (state)
         {
-            case kButtonTagOpenPaletteViewCtrl:
+            case UIBarButtonItemNone:
+            {
+                [_canvasViewController dismissViewControllerAnimated:YES completion:nil];
+                _activeViewController = _canvasViewController;
+            }
+                break;
+            case UIBarButtonItemOpenPaletteViewCtrl:
             {
                 PaletteViewController *palettViewCtrl = [PaletteViewController new];
                 [_canvasViewController presentViewController:palettViewCtrl animated:YES completion:nil];
                 _activeViewController = palettViewCtrl;
             }
                 break;
-            case kButtonTagOpenThumbnailViewCtrl:
+            case UIBarButtonItemOpenThumbnailViewCtrl:
             {
                 ThumbnailViewController *thumbnailViewCtrl = [ThumbnailViewController new];
                 [_canvasViewController presentViewController:thumbnailViewCtrl animated:YES completion:nil];
                 _activeViewController= thumbnailViewCtrl;
-            }
-                break;
-            default:
-            {
-                [_canvasViewController dismissViewControllerAnimated:YES completion:nil];
-                _activeViewController = _canvasViewController;
             }
                 break;
         }

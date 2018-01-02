@@ -22,12 +22,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    kButtonTagDone,
-    kButtonTagOpenPaletteViewCtrl,
-    kButtonTagOpenThumbnailViewCtrl
-} ButtonTag;
-
+typedef NS_ENUM(NSUInteger, UIBarButtonItemState) {
+    UIBarButtonItemNone,
+    UIBarButtonItemOpenPaletteViewCtrl,
+    UIBarButtonItemOpenThumbnailViewCtrl
+};
 
 @class CanvasViewController;
 @interface CoordinatingController : NSObject <NSCopying>
